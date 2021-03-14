@@ -168,6 +168,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-acw-day1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/14/acw-day1/">acw-day1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/14/acw-day1/" class="archive-article-date">
+  	<time datetime="2021-03-14T14:09:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Acw-93递归实现组合形枚举"><a href="#Acw-93递归实现组合形枚举" class="headerlink" title="Acw-93递归实现组合形枚举"></a>Acw-93递归实现组合形枚举</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">30</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m;  <span class="comment">//n表示共有多少个数，m表示要选多少个数</span></span><br><span class="line"><span class="keyword">int</span> way[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> start)</span> <span class="comment">//u表示枚举到第几个位置，start表示能从那个数开始选</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (u &gt; m)</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=m; i++)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;way[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot; &quot;</span>); <span class="comment">//输出一个回车</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            way[u] = i; <span class="comment">//当前位置置入i</span></span><br><span class="line">            dfs(u+<span class="number">1</span>, i+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    dfs(<span class="number">1</span>,<span class="number">1</span>);   </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>优化：</em></p>
+<blockquote>
+<p>由于后面位置有些不够选择，因此可以进行剪枝</p>
+<p>即： 已选的数+剩余的数的数量 &lt; 需要选择的数的数量</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">30</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m;  <span class="comment">//n表示共有多少个数，m表示要选多少个数</span></span><br><span class="line"><span class="keyword">int</span> way[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> start)</span> <span class="comment">//u表示枚举到第几个位置，start表示能从那个数开始选</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">    <span class="keyword">if</span> (u + n - start &lt; m) <span class="keyword">return</span>; <span class="comment">// 这一步进行剪枝</span></span><br><span class="line">    <span class="keyword">if</span> (u &gt; m)</span><br><span class="line">    &#123;   </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;=m; i++)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;way[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot; &quot;</span>); <span class="comment">//输出一个回车</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt;= n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            way[u] = i; <span class="comment">//当前位置置入i</span></span><br><span class="line">            dfs(u+<span class="number">1</span>, i+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    dfs(<span class="number">1</span>,<span class="number">1</span>);   </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>int      4字节</p>
+<p>float   4字节</p>
+<p>char    1字节</p>
+<p>double 8字节</p>
+<p>long long 8字节</p>
+</blockquote>
+<p>字节用<code>B</code>表示   位用<code>b</code>表示</p>
+<blockquote>
+<p>例如64MB</p>
+<p>为64x2的二十次方Byte</p>
+<p>即6.4x10的七次方Byte</p>
+<p>为1.6x10的七次方个int</p>
+</blockquote>
+<h3 id="acw–1209带分数"><a href="#acw–1209带分数" class="headerlink" title="acw–1209带分数"></a>acw–1209带分数</h3>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/14/acw-day1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
