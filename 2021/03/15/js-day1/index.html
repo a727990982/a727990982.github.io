@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>letter | Hexo</title>
+  <title>js-day1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="letter">
-<meta property="og:url" content="http://example.com/letter/index.html">
+  <meta name="description" content="引入javascript 内部标签  123&lt;script&gt;	&#x2F;&#x2F;........&lt;&#x2F;script&gt;   外部引入  abs.js 1alert(&quot;heelo&quot;);  test.html 1&lt;script src&#x3D;&quot;abs,js&quot;&gt;&lt;&#x2F;script&gt;         基本语法&#x3D;&#x3D;变量&#x3D;&#x3D; 1var 王者荣耀 &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-day1">
+<meta property="og:url" content="http://example.com/2021/03/15/js-day1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="引入javascript 内部标签  123&lt;script&gt;	&#x2F;&#x2F;........&lt;&#x2F;script&gt;   外部引入  abs.js 1alert(&quot;heelo&quot;);  test.html 1&lt;script src&#x3D;&quot;abs,js&quot;&gt;&lt;&#x2F;script&gt;         基本语法&#x3D;&#x3D;变量&#x3D;&#x3D; 1var 王者荣耀 &#x3D;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-10T09:31:12.000Z">
-<meta property="article:modified_time" content="2021-03-10T09:31:12.195Z">
+<meta property="og:image" content="http://example.com/2021/03/15/js-day1/image-20210315234137131.png">
+<meta property="og:image" content="http://example.com/2021/03/15/js-day1/image-20210315234539807.png">
+<meta property="article:published_time" content="2021-03-15T15:47:35.000Z">
+<meta property="article:modified_time" content="2021-03-15T15:48:11.802Z">
 <meta property="article:author" content="Gargantua">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/15/js-day1/image-20210315234137131.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -174,27 +179,141 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-js-day1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      letter
+      js-day1
     </h1>
   
 
         
-        <a href="/letter/index.html" class="archive-article-date">
-  	<time datetime="2021-03-10T09:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
+        <a href="/2021/03/15/js-day1/" class="archive-article-date">
+  	<time datetime="2021-03-15T15:47:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="引入javascript"><a href="#引入javascript" class="headerlink" title="引入javascript"></a>引入javascript</h2><ol>
+<li>内部标签</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="comment">//........</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>外部引入</li>
+</ol>
+<p><code>abs.js</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;heelo&quot;);</span><br></pre></td></tr></table></figure>
+
+<p><code>test.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;abs,js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>     </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>==变量==</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 王者荣耀 = <span class="string">&#x27;倔强青铜&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>==number==</p>
+<p>js不区分小数和整数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">123</span> </span><br><span class="line"><span class="number">123.123</span></span><br><span class="line"><span class="number">1.123e3</span></span><br><span class="line">-<span class="number">99</span></span><br><span class="line"><span class="literal">NaN</span></span><br><span class="line"><span class="literal">Infinity</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>==字符串==</p>
+<p>‘abc’</p>
+<p>==布尔值==</p>
+<p>true false</p>
+<p>==逻辑运算==</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp;</span><br><span class="line">||</span><br><span class="line">!</span><br></pre></td></tr></table></figure>
+
+
+
+<p>==比较运算符==</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">= 赋值</span><br><span class="line">    </span><br><span class="line">== 等于(类型不一样，值一样，也会判断为<span class="literal">true</span>)</span><br><span class="line">    </span><br><span class="line">=== 绝对等于(类型一样，值一样，才为<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+
+<p><em>这是js的缺陷，一般不使用<code>==</code>进行比较</em></p>
+<blockquote>
+<ul>
+<li>NaN与所有的数值都不相等，包括自己</li>
+<li>只能通过isNaN(NaN)来判断这个数是否为NaN</li>
+</ul>
+</blockquote>
+<p>浮点数问题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log((<span class="number">1</span>/<span class="number">3</span>)===(<span class="number">1</span>-<span class="number">2</span>/<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p><strong>尽量避免使用浮点数进行运算，存在精度问题</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.abs(1/3-(1-2/3)) &lt; 0.0000001</span><br></pre></td></tr></table></figure>
+
+
+
+<p>==null和undefined==</p>
+<ul>
+<li>null 空</li>
+<li>undefined 未定义</li>
+</ul>
+<p>==数组==</p>
+<p>java的数值必须是一系列相同类型的对象，但js中不需要这样</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="string">&#x27;hello&#x27;</span>,<span class="literal">null</span>,<span class="literal">true</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">12</span>,<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>==对象==</p>
+<p>对象是大括号，数组是中括号</p>
+<blockquote>
+<p>每个属性之间用逗号隔开</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">        <span class="comment">//Person person = new Person();   java中写法</span></span><br><span class="line">        <span class="keyword">var</span> person = &#123;</span><br><span class="line">            name : <span class="string">&quot;avc&quot;</span>,</span><br><span class="line">            age : <span class="number">3</span>,</span><br><span class="line">            tags : [<span class="string">&#x27;js&#x27;</span>,<span class="string">&#x27;java&#x27;</span>]</span><br><span class="line">        &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>取对象的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">person.name</span><br><span class="line">&gt; <span class="string">&quot;avc&quot;</span></span><br><span class="line"></span><br><span class="line">person.age</span><br><span class="line">&gt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="严格检查格式"><a href="#严格检查格式" class="headerlink" title="严格检查格式"></a>严格检查格式</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    &#x27;use strict&#x27;; 严格检查模式,预防随意导致出现问题</span></span><br><span class="line"><span class="comment">    必须写在第一行</span></span><br><span class="line"><span class="comment">    局部变量建议使用 let 去定义</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="meta">        &#x27;use strict&#x27;</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> i = <span class="number">1</span>; <span class="comment">//所声明的变量，只在let命令所在的代码块内有效</span></span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3、数据类型"><a href="#3、数据类型" class="headerlink" title="3、数据类型"></a>3、数据类型</h2><h3 id="3-1、字符串"><a href="#3-1、字符串" class="headerlink" title="3.1、字符串"></a>3.1、字符串</h3><ol>
+<li>正常字符串我们用单引号，或双引号包裹</li>
+<li>注意转义字符 \</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\&#x27;</span><br><span class="line">\n</span><br><span class="line">\t</span><br><span class="line">\u4e2d \u#### Unicode字符</span><br><span class="line">\x41 		  Ascii字符</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>多行字符串编写</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg =<span class="string">`</span></span><br><span class="line"><span class="string">                 hello</span></span><br><span class="line"><span class="string">                 world</span></span><br><span class="line"><span class="string">        年好呀</span></span><br><span class="line"><span class="string">        `</span>;</span><br><span class="line">        alert(msg);</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>模板字符串</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;qinjiang&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">let</span> msg = <span class="string">`你好呀，<span class="subst">$&#123;name&#125;</span>`</span>;   <span class="comment">//注意这个符号`(在esc下方),不是&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(msg);</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>字符串不可变</li>
+</ol>
+<p><img src="image-20210315234137131.png" alt="image-20210315234137131"></p>
+<ol start="6">
+<li>大小写转换</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意，这里是方法不是属性</span></span><br><span class="line">student.toUpperCase()</span><br><span class="line">student.toLowerCase()</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>查找字符串中字符索引</li>
+</ol>
+<p><code>student.indexOf(&#39;t&#39;)</code></p>
+<ol start="8">
+<li>取出其中一段(左闭右开)</li>
+</ol>
+<p><img src="image-20210315234539807.png" alt="image-20210315234539807"></p>
+
       
 
       
@@ -273,7 +392,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/letter/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/15/js-day1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,6 +404,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/14/acw-day1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">acw-day1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -335,7 +464,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
